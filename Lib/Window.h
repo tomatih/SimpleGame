@@ -19,6 +19,9 @@ public:
     ~Window();
     Window(const Window&) = delete;
     Window operator=(const Window&) = delete;
+
+    // forward exit button press
+    bool shouldClose() const;
 };
 
 

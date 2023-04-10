@@ -1,8 +1,8 @@
-#include <iostream>
-#include <raylib.h>
-#include "Lib/Window.h"
+
+#include "Lib/FlappyBird.h"
 
 int main() {
-    Window window = Window(1600, 900, "Test Window");
+    FlappyBird app;
+    app.run();
     return 0;
 }

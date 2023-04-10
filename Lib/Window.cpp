@@ -18,3 +18,7 @@ Window::~Window() {
     // destroy raylib window
     CloseWindow();
 }
+
+bool Window::shouldClose() const{
+    return WindowShouldClose();
+}
