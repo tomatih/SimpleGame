@@ -20,7 +20,7 @@ private:
     // collection of the game objects
     std::vector<std::unique_ptr<GameObject>> gameObjects;
 public:
-    const static int screenWidth = 600;
+    const static int screenWidth = 600*2;
     const static int screenHeight = 1080;
 
 
