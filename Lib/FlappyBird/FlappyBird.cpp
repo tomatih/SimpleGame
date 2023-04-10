@@ -4,6 +4,7 @@
 
 #include "FlappyBird.h"
 #include "raylib.h"
+#include "../Bird/Bird.h"
 
 void FlappyBird::run() {
     while (!window.shouldClose()){
@@ -24,4 +25,6 @@ void FlappyBird::run() {
 FlappyBird::FlappyBird() {
     // add background
     gameObjects.push_back(std::make_unique<Background>());
+    // add the player
+    gameObjects.push_back(std::make_unique<Bird>());
 }
