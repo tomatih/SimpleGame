@@ -8,6 +8,7 @@
 
 #include <raylib.h>
 #include "../GameObject/GameObject.h"
+#include "../FlappyBird/FlappyBird.h"
 
 // class for the player character
 class Bird : public GameObject{
@@ -16,7 +17,7 @@ public:
     const float radius = 40.0f;
 
     // kinematic model of the bird
-    Vector2 position= {600.0f/2.0f,1080.0f/2.0f};
+    Vector2 position= {FlappyBird::screenWidth/2.0f,FlappyBird::screenHeight/2.0f};
     float velocity = 0.0f;
 
     // game object compliance

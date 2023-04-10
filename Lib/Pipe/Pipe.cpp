@@ -3,12 +3,13 @@
 //
 
 #include "Pipe.h"
+#include "../FlappyBird/FlappyBird.h"
 
 void Pipe::draw() {
     // draw top
     DrawRectangle(position.x, 0, width, position.y-spacing/2, color);
     // draw bottom
-    DrawRectangle(position.x,position.y+spacing/2, width,1080-position.y, color);
+    DrawRectangle(position.x,position.y+spacing/2, width,FlappyBird::screenHeight-position.y, color);
 }
 
 void Pipe::update() {
@@ -18,8 +19,8 @@ void Pipe::update() {
 
 void Pipe::reset() {
     position = {
-             600.0f + width,
-             (float)GetRandomValue(10,1080-10)
+            (float)FlappyBird::screenWidth + width,
+             (float)GetRandomValue(10,FlappyBird::screenHeight-10)
     };
 }
 

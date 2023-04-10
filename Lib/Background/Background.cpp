@@ -4,6 +4,7 @@
 
 #include "Background.h"
 #include "raylib.h"
+#include "../FlappyBird/FlappyBird.h"
 
 void Background::update() {
     // Do nothing background static for now
@@ -11,5 +12,5 @@ void Background::update() {
 
 void Background::draw() {
     // just fill screen with solid colour
-    DrawRectangleV({0,0},{600,1080}, {91, 206, 250,255});
+    DrawRectangleV({0,0},{FlappyBird::screenWidth, FlappyBird::screenHeight}, {91, 206, 250,255});
 }

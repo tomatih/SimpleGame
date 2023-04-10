@@ -16,10 +16,14 @@
 class FlappyBird {
 private:
     // a constant window object to display the game at
-    const Window window = Window(600, 1080, "Flappy Bird");
+    const Window window = Window(screenWidth, screenHeight, "Flappy Bird");
     // collection of the game objects
     std::vector<std::unique_ptr<GameObject>> gameObjects;
 public:
+    const static int screenWidth = 600;
+    const static int screenHeight = 1080;
+
+
     FlappyBird();
     void run();
 };
