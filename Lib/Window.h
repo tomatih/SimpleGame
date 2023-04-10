@@ -9,12 +9,16 @@
 
 class Window {
 public:
+    // window constants
     const int width;
     const int height;
     const std::string title;
 
+    // lifetime management
     Window(int windowWidth, int windowHeight, std::string windowTitle);
     ~Window();
+    Window(const Window&) = delete;
+    Window operator=(const Window&) = delete;
 };
 
 
