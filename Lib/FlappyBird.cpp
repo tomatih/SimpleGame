@@ -7,6 +7,16 @@
 
 void FlappyBird::run() {
     while (!window.shouldClose()){
-        PollInputEvents();
+        // logic update
+        for(auto& object: gameObjects){
+            object->update();
+        }
+        // graphics update
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+        for(auto& object: gameObjects){
+            object->draw();
+        }
+        EndDrawing();
     }
 }

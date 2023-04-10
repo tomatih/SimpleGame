@@ -7,12 +7,19 @@
 
 
 #include "Window.h"
+#include "vector"
+#include "memory"
+#include "GameObject.h"
 
 class FlappyBird {
 private:
     const Window window = Window(1600, 900, "Flappy Bird");
+    std::vector<std::unique_ptr<GameObject>> gameObjects = {
+
+    };
 
 public:
+    //FlappyBird();
     void run();
 };
 
