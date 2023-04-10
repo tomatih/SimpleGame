@@ -7,6 +7,7 @@
 
 
 #include <vector>
+#include <queue>
 #include "../GameObject/GameObject.h"
 #include "../Pipe/Pipe.h"
 
@@ -15,7 +16,14 @@ private:
     // pipe pool
     std::vector<Pipe> pipes;
 
+    // pool access
+    std::vector<Pipe*> toUse;
+    std::deque<Pipe*> inUse;
+
+    // spawning conditions
     const float spacing = 400;
+    const double spawnRate = 1; //in seconds
+    double nextSpawn;
 
 public:
     PipeManager();
