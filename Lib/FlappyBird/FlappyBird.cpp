@@ -5,6 +5,7 @@
 #include "FlappyBird.h"
 #include "raylib.h"
 #include "../Bird/Bird.h"
+#include "../Pipe/Pipe.h"
 
 void FlappyBird::run() {
     while (!window.shouldClose()){
@@ -27,4 +28,7 @@ FlappyBird::FlappyBird() {
     gameObjects.push_back(std::make_unique<Background>());
     // add the player
     gameObjects.push_back(std::make_unique<Bird>());
+    // add pipe
+    gameObjects.push_back(std::make_unique<Pipe>());
+
 }
