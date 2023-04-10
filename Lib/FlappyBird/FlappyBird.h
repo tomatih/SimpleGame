@@ -6,10 +6,10 @@
 #define MODERNCPP_FLAPPYBIRD_H
 
 
-#include "Window.h"
+#include "../Window/Window.h"
 #include "vector"
 #include "memory"
-#include "GameObject.h"
+#include "../GameObject/GameObject.h"
 
 class FlappyBird {
 private:

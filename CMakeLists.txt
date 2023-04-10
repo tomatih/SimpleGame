@@ -7,5 +7,5 @@ find_package(raylib REQUIRED)
 add_compile_options(-Wall -Wextra -pedantic -Werror)
 add_definitions(-DVK_USE_PLATFORM_XCB_KHR)
 
-add_executable(ModernCPP main.cpp Lib/Window.h Lib/Window.cpp Lib/FlappyBird.h Lib/FlappyBird.cpp Lib/GameObject.h)
+add_executable(ModernCPP main.cpp Lib/Window/Window.h Lib/Window/Window.cpp Lib/FlappyBird/FlappyBird.h Lib/FlappyBird/FlappyBird.cpp Lib/GameObject/GameObject.h)
 target_link_libraries(ModernCPP PUBLIC raylib)

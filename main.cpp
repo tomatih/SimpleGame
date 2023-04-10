@@ -1,5 +1,5 @@
 
-#include "Lib/FlappyBird.h"
+#include "Lib/FlappyBird/FlappyBird.h"
 
 int main() {
     FlappyBird app;
