@@ -2,17 +2,17 @@
 // Created by to_matih on 10/04/23.
 //
 
-#ifndef MODERNCPP_PIPE_H
-#define MODERNCPP_PIPE_H
+#ifndef MODERNCPP_OBSTACLE_H
+#define MODERNCPP_OBSTACLE_H
 
 
 #include <raylib.h>
 #include "../GameObject/GameObject.h"
 
 // class representing the obstacles
-class Pipe : public GameObject{
+class Obstacle : public GameObject{
 public:
-    // pipe properties
+    // obstacle properties
     const int width = 80;
     const Color color = {0,100,0,255};
     const int spacing = 160;
@@ -23,12 +23,12 @@ public:
 
     void reset();
 
-    Pipe();
+    Obstacle();
     // game object compliance
     void draw() override;
      void update() override;
-     ~Pipe() override = default;
+     ~Obstacle() override = default;
 };
 
 
-#endif //MODERNCPP_PIPE_H
+#endif //MODERNCPP_OBSTACLE_H

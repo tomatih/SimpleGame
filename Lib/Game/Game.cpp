@@ -2,13 +2,12 @@
 // Created by to_matih on 10/04/23.
 //
 
-#include "FlappyBird.h"
+#include "Game.h"
 #include "raylib.h"
-#include "../Bird/Bird.h"
-#include "../Pipe/Pipe.h"
-#include "../PipeManager/PipeManager.h"
+#include "../Player/Player.h"
+#include "../ObstacleManager/ObstacleManager.h"
 
-void FlappyBird::run() {
+void Game::run() {
     while (!window.shouldClose()){
         // logic update
         for(auto& object: gameObjects){
@@ -24,12 +23,12 @@ void FlappyBird::run() {
     }
 }
 
-FlappyBird::FlappyBird() {
+Game::Game() {
     // add background
     gameObjects.push_back(std::make_unique<Background>());
     // add the player
-    gameObjects.push_back(std::make_unique<Bird>());
-    // add pipe
-    gameObjects.push_back(std::make_unique<PipeManager>());
+    gameObjects.push_back(std::make_unique<Player>());
+    // add obstacles
+    gameObjects.push_back(std::make_unique<ObstacleManager>());
 
 }

@@ -1,8 +1,9 @@
-
-#include "Lib/FlappyBird/FlappyBird.h"
+#include "Lib/Game/Game.h"
 
 int main() {
-    FlappyBird app;
+    // spawn the game object
+    Game app;
+    // start the main loop
     app.run();
     return 0;
 }

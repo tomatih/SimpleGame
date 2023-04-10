@@ -2,13 +2,12 @@
 // Created by to_matih on 10/04/23.
 //
 
-#include "Bird.h"
-#include "../FlappyBird/FlappyBird.h"
-void Bird::draw() {
+#include "Player.h"
+void Player::draw() {
     DrawCircleV(position,radius,YELLOW);
 }
 
-void Bird::update() {
+void Player::update() {
     // update position
     position.y += velocity * GetFrameTime();
 
@@ -16,8 +15,8 @@ void Bird::update() {
     velocity += 1000 * GetFrameTime();
 
     // ground collision
-    if (position.y >= FlappyBird::screenHeight - radius) {
-        position.y = FlappyBird::screenHeight - radius;
+    if (position.y >= Game::screenHeight - radius) {
+        position.y = Game::screenHeight - radius;
         velocity = 0;
     }
 
