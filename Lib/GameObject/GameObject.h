@@ -10,6 +10,7 @@ class GameObject {
 public:
     virtual void draw() = 0; // for graphics
     virtual void update() = 0; // for interactivity
+    virtual ~GameObject()= default;
 };
 
 

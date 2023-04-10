@@ -20,3 +20,8 @@ void FlappyBird::run() {
         EndDrawing();
     }
 }
+
+FlappyBird::FlappyBird() {
+    // add background
+    gameObjects.push_back(std::make_unique<Background>());
+}
