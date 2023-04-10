@@ -6,6 +6,7 @@
 #include "raylib.h"
 #include "../Bird/Bird.h"
 #include "../Pipe/Pipe.h"
+#include "../PipeManager/PipeManager.h"
 
 void FlappyBird::run() {
     while (!window.shouldClose()){
@@ -29,6 +30,6 @@ FlappyBird::FlappyBird() {
     // add the player
     gameObjects.push_back(std::make_unique<Bird>());
     // add pipe
-    gameObjects.push_back(std::make_unique<Pipe>());
+    gameObjects.push_back(std::make_unique<PipeManager>());
 
 }

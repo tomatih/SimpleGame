@@ -15,3 +15,14 @@ void Pipe::update() {
     // update position
     position.x += velocity * GetFrameTime();
 }
+
+void Pipe::reset() {
+    position = {
+             600.0f + width,
+             (float)GetRandomValue(10,1080-10)
+    };
+}
+
+Pipe::Pipe() {
+    reset();
+}

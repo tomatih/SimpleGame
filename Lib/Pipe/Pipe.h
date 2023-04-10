@@ -19,8 +19,11 @@ public:
 
     // kinematic model
     const float velocity = -300.0f;
-    Vector2 position = {600.0f,1080.0f/2.0f};
+    Vector2 position = {};
 
+    void reset();
+
+    Pipe();
     // game object compliance
     void draw() override;
      void update() override;
