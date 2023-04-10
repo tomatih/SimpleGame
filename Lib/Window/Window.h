@@ -7,6 +7,7 @@
 
 #include <string>
 
+// C++ wrapper round the window behaviour in raylib
 class Window {
 public:
     // window constants

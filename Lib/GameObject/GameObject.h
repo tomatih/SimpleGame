@@ -5,11 +5,11 @@
 #ifndef MODERNCPP_GAMEOBJECT_H
 #define MODERNCPP_GAMEOBJECT_H
 
-
+// Game object interface allowing for creation of drawable updating objects
 class GameObject {
 public:
-    virtual void draw() = 0;
-    virtual void update() = 0;
+    virtual void draw() = 0; // for graphics
+    virtual void update() = 0; // for interactivity
 };
 
 

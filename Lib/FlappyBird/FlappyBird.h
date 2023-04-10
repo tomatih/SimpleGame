@@ -11,15 +11,17 @@
 #include "memory"
 #include "../GameObject/GameObject.h"
 
+// class representing the game itself
 class FlappyBird {
 private:
+    // a constant window object to display the game at
     const Window window = Window(1600, 900, "Flappy Bird");
+    // collection of the game objects
     std::vector<std::unique_ptr<GameObject>> gameObjects = {
 
     };
 
 public:
-    //FlappyBird();
     void run();
 };
 
